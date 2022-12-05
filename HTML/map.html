@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Active Cincinnati</title> <!--Change this!! -->
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet" />
+  <style>
+    body { margin:0; padding:0; }
+    #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+
+<div id='map'></div>
+
+  <script>
+    // Change this to your Access token ----------------------
+    mapboxgl.accessToken = 'pk.eyJ1IjoiY2hhcmxlc2FsdGVuZG9yZiIsImEiOiJjbGF6eDBodmwxY24yM3Bsbm41M24zeGFxIn0.Sf4kAiKT5mJkotGjkwID3Q';
+    // ------------------------------------------------
+
+    var map = new mapboxgl.Map({
+      container: 'map',
+
+      // Change this to your style --------------------
+      style: 'mapbox://styles/charlesaltendorf/clb8rm4q2001215n5c27c8p1d',
+      // ----------------------------------------------
+
+      // Change to your location ----------------------
+      zoom: 10.42,
+      center: [-84.545697, 39.145168]
+      // ----------------------------------------------
+
+    });
+
+    // Add geolocate control to the map.
+     map.addControl(new mapboxgl.NavigationControl());
+  </script>
+
+</body>
+
+</html>
