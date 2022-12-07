@@ -9,12 +9,88 @@
   <style>
     body { margin:0; padding:0; }
     #map { position:absolute; top:0; bottom:0; width:100%; }
+    #legend {position: absolute; 
+      bottom: 0; 
+      right: 0; 
+      z-index: 1000; 
+      margin-bottom: 30px; 
+      margin-right: 10px;
+      background: white;
+      border-radius: 5px;
+      padding: 5px 10px;
+      box-shadow: 0 0 0 2px rgb(0 0 0 / 10%);}
+    .legend-key {
+      display: inline-block;
+      border-radius: 20%;
+      width: 10px;
+      height: 10px;
+      margin-right: 5px;
+    }
   </style>
 </head>
 <body>
 
-<div id='map'></div>
-
+<div id='map'>
+  <div id="legend">
+    <div class='my-legend'>
+      <div class='legend-title'>
+        Cinci Census Tract Population<br>
+        Change 2010-2020
+      </div>
+      <div class='legend-scale'>
+        <ul class='legend-labels'>
+          <li><span style='background:#ff0000;'></span>-869--258</li>
+          <li><span style='background:#ff4040;'></span>-258-0</li>
+          <li><span style='background:#54bc4f;'></span>0-366</li>
+          <li><span style='background:#52864f;'></span>366-1403</li>
+          <li><span style='background:#52864f;'></span>1403-2353</li>
+          <li><span style='background:#2e13c9;'></span>Private Athletic Clubs</li>        
+        </ul>
+      </div>
+      </div>
+      
+      <style type='text/css'>
+        .my-legend .legend-title {
+          text-align: left;
+          margin-bottom: 5px;
+          font-weight: bold;
+          font-size: 90%;
+          }
+        .my-legend .legend-scale ul {
+          margin: 0;
+          margin-bottom: 5px;
+          padding: 0;
+          float: left;
+          list-style: none;
+          }
+        .my-legend .legend-scale ul li {
+          font-size: 80%;
+          list-style: none;
+          margin-left: 0;
+          line-height: 18px;
+          margin-bottom: 2px;
+          }
+        .my-legend ul.legend-labels li span {
+          display: block;
+          float: left;
+          height: 16px;
+          width: 30px;
+          margin-right: 5px;
+          margin-left: 0;
+          border: 1px solid #999;
+          }
+        .my-legend .legend-source {
+          font-size: 70%;
+          color: #999;
+          clear: both;
+          }
+        .my-legend a {
+          color: #777;
+          }
+      </style>
+  </div>
+</div>
+  
   <script>
     // Change this to your Access token ----------------------
     mapboxgl.accessToken = 'pk.eyJ1IjoiY2hhcmxlc2FsdGVuZG9yZiIsImEiOiJjbGF6eDBodmwxY24yM3Bsbm41M24zeGFxIn0.Sf4kAiKT5mJkotGjkwID3Q';
@@ -34,7 +110,7 @@
 
     });
 
-    // Add geolocate control to the map.
+    // Add navigation control to the map.
      map.addControl(new mapboxgl.NavigationControl());
   </script>
 
