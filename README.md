@@ -4,7 +4,7 @@ Welcome to the Active Cincinnati Github Repository.
 ## Overview
 When the 2020 Census data was released, I was suprised to notice that certain cities had grown after years of population decline.  One of those was Cincinnati.  I went to high school on the Kentucky side of the Ohio River in Florence.  Florence's population has been growing quickly for as long as Cincinnati's has been declining.  So I was curious what kind of factors would bring people back to Cincinnati.  After reviewing the Census Tract data to find where the population had been growing, I wondered if recreation was a factor.  That is when I stumbled across the parks layer that I used to filter out private athletic clubs.
 
-## Methods
+## In the Methods Folder
 
 ### 1_Sources:
     In this folder are source shapefiles and tables that were manipulated in QGIS to Geojsons to be uploaded into mapbox.
